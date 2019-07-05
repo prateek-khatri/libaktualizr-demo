@@ -10,7 +10,7 @@ PR = "9"
 DEPENDS = "boost curl openssl libarchive libsodium sqlite3 asn1c-native"
 
 SRC_URI = " \
-  gitsm://github.com/prateek-khatri/libaktualizr-demo;protocol=https;branch=LucidTest \
+  gitsm://github.com/prateek-khatri/libaktualizr-demo;protocol=https \
   file://10-defaults.toml \
   "
 #https://github.com/prateek-khatri/libaktualizr-demo.git
