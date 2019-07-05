@@ -132,6 +132,7 @@ int main(int argc, char *argv[]) {
       boost::algorithm::to_lower(buffer);
       if (buffer == "senddevicedata") {
         aktualizr.SendDeviceData();
+        std::cout << "\n\nDevice Data Send Test\n\n";
       } else if (buffer == "fetchmetadata" || buffer == "fetchmeta" || buffer == "checkupdates" || buffer == "check") {
         auto fut_result = aktualizr.CheckUpdates();
       } else if (buffer == "download" || buffer == "startdownload") {
@@ -147,9 +148,11 @@ int main(int argc, char *argv[]) {
         aktualizr.Resume();
       } else if (buffer == "abort") {
         aktualizr.Abort();
+      } else if (buffer == "lucid") {
+        std::cout << "Lucid Air\n";
       } else if (!buffer.empty()) {
         std::cout << "Unknown command.\n";
-      }
+      } 
     }
     r = EXIT_SUCCESS;
   } catch (const std::exception &ex) {
